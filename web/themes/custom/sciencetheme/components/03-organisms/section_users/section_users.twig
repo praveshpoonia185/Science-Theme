@@ -1,0 +1,16 @@
+{% set section_users_base_class = "section_users" %}
+
+<div {{ bem(section_users_base_class) }}>
+	{% block section_users %}
+		{% for item in items %}
+			{% include "@molecules/superhero_block/superhero_block.twig" with {
+        iconclass: item.section_users_icon,
+        superhero__block_heading: item.section_users_heading,
+        superhero__block_heading_url: item.section_users_heading_url,
+        superhero__block_para: item.section_users_para,
+        superhero__block_link_url: item.section_users_link_url,
+        superhero__block_link_content: item.section_users_link,
+      } %}
+		{% endfor %}
+	{% endblock %}
+</div>

@@ -1,0 +1,15 @@
+sciencetheme.small:
+  label: small
+  mediaQuery: 'all and (min-width: 25em)'
+sciencetheme.small-med:
+  label: small-med
+  mediaQuery: 'all and (min-width: 26em)'
+sciencetheme.small-large:
+  label: small-large
+  mediaQuery: 'all and (min-width: 41em)'
+sciencetheme.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 48em)'
+sciencetheme.large:
+  label: large
+  mediaQuery: 'all and (min-width: 61.25em)'

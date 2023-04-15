@@ -1,0 +1,9 @@
+{% set hero_column_base_class = "hero_column" %}
+
+<div {{ bem(hero_column_base_class) }}>
+	{% block hero_column %}
+		{% for card in hero__card %}
+			{% include "@molecules/hero_card/hero_card.twig" %}
+		{% endfor %}
+	{% endblock %}
+</div>

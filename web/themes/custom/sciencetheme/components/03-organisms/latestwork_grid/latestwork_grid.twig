@@ -1,0 +1,9 @@
+{% set latestwork_grid_base_class = "latestwork__grid" %}
+
+<div {{ bem(latestwork_grid_base_class) }}>
+	{% block latestwork__grid %}
+		{% for card in latest__work %}
+			{% include "@molecules/latest_work/latest_work.twig" %}
+		{% endfor %}
+	{% endblock %}
+</div>

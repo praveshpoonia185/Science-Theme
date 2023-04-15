@@ -1,0 +1,67 @@
+global:
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: { type: external }
+      dist/css/style.css: {}
+      css/global_heading.css: {}
+      css/team_block.css: {}
+      css/feature.css: {}
+      css/choose_us.css: {}
+      css/latest_blogs.css: {}
+  js:
+    teachers.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+main-menu:
+  js:
+    dist/js/02-molecules/menus/main-menu/main-menu.js: {}
+  dependencies:
+    - core/drupal
+
+# IE 11 support for SVG use - disable if not needed.
+# See also components/01-atoms/images/icons/_icon.twig to remove attach_library.
+sprite:
+  js:
+    components/01-atoms/images/icons/svgxuse.min.js:
+      { attributes: { defer: true } }
+
+tabs:
+  js:
+    dist/js/02-molecules/tabs/tabs.js: {}
+  dependencies:
+    - core/drupal
+
+slick:
+  css:
+    theme:
+      node_modules/slick-carousel/slick/slick.css: {}
+  js:
+    node_modules/slick-carousel/slick/slick.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+
+hero_three_column:
+  js:
+    dist/js/03-organisms/hero_column/hero_column.js: {}
+  dependencies:
+    - sciencetheme/slick
+
+latest_work:
+  js:
+    dist/js/03-organisms/latestwork_grid/latestwork_grid.js: {}
+  dependencies:
+    - sciencetheme/slick
+
+
+custom-code-slick:
+  js:
+    js/teachers.js: {}
+
+
+custom-code-banner:
+  js:
+    js/banner.js: {}

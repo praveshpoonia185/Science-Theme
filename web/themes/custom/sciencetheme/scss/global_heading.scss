@@ -1,0 +1,44 @@
+.global__heading {
+  max-width: 860px;
+  margin: auto;
+  text-align: center;
+
+  h2 {
+    font-weight: 600;
+    margin: 0;
+    color: #262C38;
+    font-size: 25px;
+    padding-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .heading-line {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 8px 0;
+
+    span {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .one {
+      background-color: #5EB4E7;
+    }
+
+    .second {
+      background-color: #F8C44F;
+    }
+
+    .three {
+      background-color: #F49626;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

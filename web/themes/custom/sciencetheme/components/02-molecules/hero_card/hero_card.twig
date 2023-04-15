@@ -1,0 +1,36 @@
+{% set hero_card_base_class = "hero__card" %}
+
+<div {{ bem(hero_card_base_class) }}>
+	<div {{ bem('image',[], hero_card_base_class) }}>
+		{% block hero__card_image %}
+			{% include "@atoms/images/image/responsive-image.twig" with {
+        image_src: hero__card_image,
+        image_alt: hero__card_image_alt,
+      } %}
+		{% endblock %}
+	</div>
+
+	<div {{ bem('info',[], hero_card_base_class) }}>
+
+			{% include "@atoms/text/headings/_heading.twig" with {
+        heading__level: 2,
+        heading: hero__card_heading,
+        heading_url: hero__card_heading_url,
+      } %}
+
+		{% block hero__card_para %}
+			{% include "@atoms/text/text/01-paragraph.twig" with {
+        paragraph_content: hero__card_para,
+      } %}
+		{% endblock %}
+
+		<div class="hero__card_cta">
+			{% block hero__card_link %}
+				{% include "@atoms/links/link/link.twig" with {
+        link_url: hero__card_link_url, 
+        link_content: hero__card_link_content,
+      } %}
+			{% endblock %}
+		</div>
+	</div>
+</div>

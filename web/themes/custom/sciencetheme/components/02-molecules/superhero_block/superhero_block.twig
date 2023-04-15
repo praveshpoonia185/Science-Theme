@@ -1,0 +1,31 @@
+{% set superhero_block_base_class = "superhero__block" %}
+
+<div {{ bem(superhero_block_base_class) }}>
+
+  {% block superhero__image %}
+    {% include "@atoms/images/image/responsive-image.twig" with {
+      image_src: superhero__image,
+      image_alt: superhero__image_alt,
+    } %}
+  {% endblock %}
+
+	{% block superhero__icon %}
+		<i class="fa {{ iconclass }}"></i>
+	{% endblock %}
+
+	{% include "@atoms/text/headings/_heading.twig" with {
+    heading__level: 2,
+    heading: superhero__block_heading,
+    heading_url: superhero__block_heading_url,
+  } %}
+	{% include "@atoms/text/text/01-paragraph.twig" with {
+    paragraph_content: superhero__block_para,
+  } %}
+
+	<div {{ bem('link',[], superhero_block_base_class) }}>
+		{% include "@atoms/links/link/link.twig" with {
+      link_url: superhero__block_link_url,
+      link_content: superhero__block_link_content,
+    } %}
+	</div>
+</div>

@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+ function sciencetheme_preprocess_node(&$variables) {
+    $block = \Drupal\block\Entity\Block::load('views_block__latest_blogs_related_blocks');
+    $variables['My_region'] = \Drupal::entityTypeManager()
+      ->getViewBuilder('block')
+      ->view($block); // Works in Drupal 9
+  }
+  

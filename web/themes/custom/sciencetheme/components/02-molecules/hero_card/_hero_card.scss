@@ -1,0 +1,69 @@
+@import '../../00-base/01-colors/colors-vars.scss';
+@import '../../00-base/00-defaults/01-variables';
+
+* {
+  font-family: $font-family;
+}
+
+.hero__card {
+  width: 425px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .hero__card__info {
+      bottom: 20px;
+      cursor: pointer;
+    }
+  }
+
+  &__image {
+    max-width: 425px;
+
+    img {
+      width: 100%;
+      height: 525px;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    max-width: 370px;
+    background-color: $white;
+    padding: 1rem;
+    position: absolute;
+    bottom: -110px;
+    left: 1rem;
+    transition: all 0.35s ease-in-out;
+
+    h2 {
+      margin: 0;
+      margin-bottom: 8px;
+
+      a {
+        text-decoration: none;
+        color: $heading_color;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+    }
+
+    p {
+      color: $heading_color;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    .hero__card_cta {
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 8px 20px;
+        background-color: $heading_color;
+        border-radius: 20px;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{% set latest_work_base_class = "latest__work" %}
+
+<div {{ bem(latest_work_base_class) }}>
+	<div {{ bem('image',[], latest_work_base_class) }}>
+		{% block latest__work_image %}
+			{% include "@atoms/images/image/responsive-image.twig" with {
+        image_src: latest__work_image,
+        image_alt: latest__work_image_alt,
+      } %}
+		{% endblock %}
+	</div>
+  <div {{ bem('wrapper',[], latest_work_base_class) }}></div>
+  <div {{ bem('info',[], latest_work_base_class) }}>
+    {% block latest__work_icon %}
+      <i class="fa {{ icon_class }}"></i>
+    {% endblock %}
+  </div>
+</div>
